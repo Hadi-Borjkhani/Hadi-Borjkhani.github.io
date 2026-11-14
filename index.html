@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hadi Borjkhani · optical brain-monitoring instrumentation</title>
+<meta name="description" content="Projects, results and open ideas in portable near-infrared brain monitoring (fNIRS, HD-DOT, cerebral oximetry): SiPM detection, control electronics, array design, with interactive demos.">
+<meta property="og:title" content="Hadi Borjkhani">
+<meta property="og:description" content="Projects, results and open ideas in optical brain-monitoring hardware, with interactive demos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="mark" href="#top">H. Borjkhani</a>
+  <ul>
+    
+    
+    
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <canvas id="brain" role="img" aria-label="Live Monte Carlo simulation of near-infrared light travelling from a source through scalp, skull, cerebrospinal fluid and cortex to a detector"></canvas>
+  <div class="hero-text">
+    <h1>Hadi <span>Borjkhani</span></h1>
+    <p class="role">I build the hardware that lets near-infrared light read the working brain. This site is where I share finished results, work through open ideas in public, and let you try the physics yourself.</p>
+    <div class="links">
+      <a class="btn primary" href="#focus">Explore the results</a>
+      
+      <a class="btn" href="https://github.com/Hadi-Borjkhani">GitHub</a>
+    </div>
+  </div>
+  <div class="legend" aria-hidden="true">
+    <span><i style="background:var(--oxy)"></i>Source</span>
+    <span><i style="background:var(--deoxy)"></i>Detector</span>
+    <span><i style="background:linear-gradient(90deg,var(--deoxy),var(--oxy),#FFE2C8)"></i>Sensitivity</span>
+  </div>
+  <div class="hero-ctl">
+    <div class="seg" role="group" aria-label="Wavelength"><button data-lambda="760" aria-pressed="true">760 nm</button><button data-lambda="850" aria-pressed="false">850 nm</button></div>
+    <div class="seg" role="group" aria-label="View"><button data-view="sens" aria-pressed="true">Sensitivity</button><button data-view="flu" aria-pressed="false">Fluence</button></div>
+    <div class="mc-read"><span id="mc-read">Monte Carlo</span> · click an optode</div>
+  </div>
+</header>
+
+<main>
+<section class="band" id="focus">
+  <div class="wrap">
+    <div class="kicker">What I work on</div>
+    <p class="lede">Making optical brain monitoring quantitative enough to trust and small enough to wear: detectors with the dynamic range for dense arrays, compact control electronics, and calibration you can check.</p>
+    <ul class="facts">
+      <li><b>≈ 6 decades</b><span>detector dynamic range with resistor-based SiPM gain switching</span></li>
+      <li><b>76 dB</b><span>peak SNR, with about four decades quasi-linear (R² ≥ 0.9993)</span></li>
+      <li><b>3.2 µV</b><span>dark-noise floor on a 4 × 4 cm, 8 × 8 control module</span></li>
+      <li><b>29 SiPMs</b><span>benchmarked by NEP, dynamic range and detectivity</span></li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>Open to collaboration on optical neuroimaging hardware, SiPM detection and portable oximetry.</p>
+    <a class="contact-big" href="mailto:edu.borjkhani@gmail.com">edu.borjkhani@gmail.com</a>
+    <p style="margin-top:1.4em;color:var(--muted)">Berlin, Germany</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© Hadi Borjkhani</span>
+  <span>Header: live 2-D Monte Carlo of light in a layered head (approximate optical properties); sensitivity = source × detector fluence.</span>
+</footer>
+
+<script src="/assets/hero.js"></script>
+</body>
+</html>
